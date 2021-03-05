@@ -22,8 +22,9 @@ const deconnexion =()=>{
             id:nom.id,
         }}).then(()=>{
         changeUrl();
-            
+        
     })
+    window.localStorage.clear();
 }
 
 

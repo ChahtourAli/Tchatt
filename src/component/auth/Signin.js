@@ -53,9 +53,10 @@ import img1 from './3350441.jpg';
           
           localStorage.setItem('token',result.data.token);
           user=result.data.result[0];
-          var salah ={id: user.id, nom: user.nom, prenom:user.prenom };
+          var avatar = user.avatar ;
+          var salah ={id: user.id, nom: user.nom, prenom:user.prenom, etat:user.etat, status:user.status};
           localStorage.setItem('user',JSON.stringify(salah));
-          
+          localStorage.setItem('avatar',avatar);
           
           
            changeUrl();  

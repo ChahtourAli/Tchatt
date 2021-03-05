@@ -123,14 +123,14 @@ const Gerer = () => {
         Axios.post("http://192.168.4.133:4000/updateUserr",{
          params:{ 
              id:upd,
-            nom:nomm,
-            prenom:prenom,
+            nom:nomm.toUpperCase(),
+            prenom:prenom.charAt(0).toUpperCase() + prenom.slice(1),
             mdp:mdp   
         }
         }).then((response) => {
-          
-                handleClose3();
+   
         });
+        handleClose3()  ;
       };
     const Ajout =()=>{
       
